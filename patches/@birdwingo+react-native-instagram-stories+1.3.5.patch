@@ -1,0 +1,12 @@
+diff --git a/node_modules/@birdwingo/react-native-instagram-stories/src/components/Avatar/Avatar.styles.ts b/node_modules/@birdwingo/react-native-instagram-stories/src/components/Avatar/Avatar.styles.ts
+index b0c51d6..5af1448 100644
+--- a/node_modules/@birdwingo/react-native-instagram-stories/src/components/Avatar/Avatar.styles.ts
++++ b/node_modules/@birdwingo/react-native-instagram-stories/src/components/Avatar/Avatar.styles.ts
+@@ -5,6 +5,7 @@ export default StyleSheet.create( {
+   container: {
+     flexDirection: 'row',
+     alignItems: 'center',
++    marginHorizontal:2
+   },
+   avatar: {
+     left: AVATAR_OFFSET,

@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#ffffff",
+      "translucent": true
+    },
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "icon": "./assets/images/appIcon.png",
+    "splash": {
+      "image": "./assets/images/splash_screen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://n"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos."
+        }
+      ],
+      "react-native-vision-camera"
+    ],
+    "name": "Auto Cart",
+    "slug": "auto-cart",
+    "ios": {
+      "bundleIdentifier": "com.autocart"
+    },
+    "android": {
+      "package": "com.autocart"
+    }
+  }
+}

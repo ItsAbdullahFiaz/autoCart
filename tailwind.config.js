@@ -1,0 +1,105 @@
+/** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
+  theme: {
+    fontFamily: {
+      gilroyRegular: ["Gilroy-Regular"],
+      gilroySemibold: ["Gilroy-SemiBold"],
+      gilroyBold: ["Gilroy-Bold"],
+      gilroyLight: ["Gilroy-Light"],
+      gilroyMedium: ["Gilroy-Medium"],
+      gilroyExtrabold: ["Gilroy-ExtraBold"],
+      gilroyHeavy: ["Gilroy-Heavy"],
+      montserratBold: ["Montserrat-Bold"],
+      montserratBlack: ["Montserrat-Black"],
+      montserratExtraBold: ["Montserrat-ExtraBold"],
+      montserratExtraLight: ["Montserrat-ExtraLight"],
+      montserratLight: ["Montserrat-Light"],
+      montserratMedium: ["Montserrat-Medium"],
+      montserratRegular: ["Montserrat-Regular"],
+      montserratSemiBold: ["Montserrat-SemiBold"],
+      montserratThin: ["Montserrat-Thin"],
+    },
+    colors: {
+      black: "#000000",
+      white: "#ffffff",
+      primary: "#52A15A",
+      darkGreen: "#007F0D",
+      text: "#484C52",
+      blue: "#036CCD",
+      lightBlue: "#096BFF",
+      lightBlueMessage: "#3D97EA",
+      royalBlue: "#096BFF",
+      red: "#F44B4B",
+      blackOverlay: "rgba(0, 0, 0, 0.6)",
+      whiteOverlay: "rgba(255, 255, 255, 0.10)",
+      gray: "#808080",
+      mustard: "#FC8E0E",
+      borderColor: "rgba(137, 135, 135, 0.1)",
+      cardBorderColor: "#E2E2E2",
+      darkBlue: "#0C0095",
+      green: "#07B007",
+      lightBlack: "#222222",
+      darkGray: "#4A524B",
+      dullWhite: "#F3F5F7",
+      alertGreen: "#225E06",
+      darkRed: "#BC0000",
+      grey: "#8C8C8C",
+      dullGray: "#BCB6B6",
+      textInputBg: "#F0F0F0",
+    },
+    extend: {
+      fontSize: {
+        xxs: "10px",
+        xs: "12px",
+        sm: "14px",
+        base: "16px",
+        lg: "18px",
+        xl: "20px",
+        text2xl: "22px",
+        text3xl: "24px",
+        text4xl: "26px",
+        text5xl: "28px",
+        text6xl: "30px",
+      },
+      fontWeight: {
+        800: "800",
+      },
+      borderRadius: {
+        lg: "8px",
+        xl: "12px",
+        "2xl": "16px",
+        "3xl": "24px",
+      },
+    },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  plugins: [
+    plugin(function ({ addComponents, theme }) {
+      addComponents({
+        ".gilroy18SemiBold": {
+          color: theme("colors.black"),
+          fontSize: theme("fontSize.lg"),
+        },
+        ".gilroy12Medium": {
+          color: theme("colors.text"),
+          fontSize: theme("fontSize.sm"),
+        },
+        ".montserratbuttonTextStyle": {
+          fontFamily: theme("fontFamily.montserratSemiBold"),
+          color: theme("colors.white"),
+          fontSize: theme("fontSize.base"),
+        },
+        ".gilroybuttonTextStyle": {
+          fontFamily: theme("fontFamily.gilroySemibold"),
+          color: theme("colors.white"),
+          fontSize: theme("fontSize.base"),
+        },
+      });
+    }),
+  ],
+};
