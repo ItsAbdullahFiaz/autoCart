@@ -31,7 +31,12 @@
           "photosPermission": "The app accesses your photos."
         }
       ],
-      "react-native-vision-camera"
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "Allow this app to access your camera"
+        }
+      ]
     ],
     "name": "Auto Cart",
     "slug": "auto-cart",
